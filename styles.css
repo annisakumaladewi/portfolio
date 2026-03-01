@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-family: "Roboto Serif", serif;
+  font-weight: 400;
+  font-size: 28px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-family: "Roboto Serif", serif;
+  font-weight: 400;
+  font-size: 26px;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  padding: 16px 20px; /* breathing room from screen edges */
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+nav a {
+  font-family: "Roboto", serif;
+  font-size: 20px; /* slightly smaller */
+  padding: 8px 40px; /* slimmer vertically, wider horizontally */
+  margin: 6px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+nav div {
+  display: flex;
+  gap: 12px;
+}
+
+#nav-home {
+  background-color: #dcddddff;
+  border: 2px solid #dcddddff;
+}
+#nav-home:hover {
+  background-color: white;
+  border: 2px solid #dcddddff;
+}
+#nav-about {
+  background-color: #ffee01ff;
+  border: 2px solid #ffee01ff;
+}
+#nav-about:hover {
+  background-color: white;
+  border: 2px solid #ffee01ff;
+}
+#nav-projects {
+  background-color: #fe98a4ff;
+  border: 2px solid #fe98a4ff;
+}
+#nav-projects:hover {
+  background-color: white;
+  border: 2px solid #fe98a4ff;
+}
+#nav-contact {
+  background-color: #fdaf48ff;
+  border: 2px solid #fdaf48ff;
+}
+#nav-contact:hover {
+  background-color: white;
+  border: 2px solid #fdaf48ff;
+}
+
+#scroll-indicator {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(45deg);
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+}
+
+#tagline {
+  font-family: "Roboto Serif", serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: black;
+}
+
+section#main {
+  background-color: #fbf7ebff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  position: relative;
+}
+
+img {
+  border-radius: 50%;
+}
+
+section#about {
+  background-color: #ffee01ff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  text-align: center;
+  width: 100%;
+}
+
+section#about div {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+mark#python {
+  background-color: #fd6a4e;
+}
+
+mark#r {
+  background-color: #59d0bb;
+}
+
+mark#tableau {
+  background-color: #fe98a4;
+}
+
+mark#powerbi {
+  background-color: #fdaf48;
+}
+
+mark#sql {
+  background-color: #c2d51c;
+}
+
+mark#qgis {
+  background-color: #64c2db;
+}
+
+mark#stata {
+  background-color: #f5cdfe;
+}
+
+mark#d3 {
+  background-color: #a3f0f4;
+}
+
+section#projects {
+  background-color: #fbf7ebff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#my-projects {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+#cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+  margin: 20px;
+}
+#card-ppe:hover,
+#card-ab:hover,
+#card-nhs:hover,
+#card-cnn:hover,
+#card-nyt:hover {
+  background-color: white;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#card-ppe {
+  background-color: #f5cdfeff;
+  transform: rotate(3deg);
+}
+#card-ppe:hover {
+  border: 2px solid #f5cdfeff;
+}
+
+#card-ab {
+  background-color: #fd6a4eff;
+  transform: rotate(-3deg);
+}
+#card-ab:hover {
+  border: 2px solid #fd6a4eff;
+}
+
+#card-nhs {
+  background-color: #a3f0f4ff;
+  transform: rotate(3deg);
+}
+#card-nhs:hover {
+  border: 2px solid #a3f0f4ff;
+}
+
+#card-cnn {
+  background-color: #fed350ff;
+  transform: rotate(-3deg);
+}
+#card-cnn:hover {
+  border: 2px solid #fed350ff;
+}
+
+#card-nyt {
+  background-color: #59d0bbff;
+  transform: rotate(3deg);
+}
+#card-nyt:hover {
+  border: 2px solid #59d0bbff;
+}
+
+#guide {
+  color: #595959;
+  margin-top: 100px;
+}
+
+section#contact {
+  background-color: #fdaf48ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+a#linkedin,
+a#github,
+a#email {
+  padding: 6px 30px; /* slimmer vertically, wider horizontally */
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+a#linkedin:hover,
+a#github:hover,
+a#email:hover {
+  background-color: white;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a#linkedin {
+  background-color: #64c2db;
+  border: 2px #64c2db solid;
+}
+a#linkedin:hover {
+  border: 2px #64c2db solid;
+}
+
+a#github {
+  border: 2px #e280c0 solid;
+  background-color: #e280c0;
+}
+a#github:hover {
+  border: 2px #e280c0 solid;
+}
+
+a#email {
+  border: 2px #fd6a4e solid;
+  background-color: #fd6a4e;
+}
+a#email:hover {
+  border: 2px #fd6a4e solid;
+}
+
+div#contact_links {
+  display: flex;
+  gap: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", serif;
+  font-size: 20px;
+  color: black;
+}
+
+p {
+  margin-bottom: 16px;
+  color: black;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+}
