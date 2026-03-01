@@ -1,5 +1,5 @@
 const tagline = document.getElementById("tagline");
-const taglineText = "Turning data into stories that actually matter.";
+const taglineText = "Exploring the stories data can tell.";
 let i = 0;
 
 const typing = setInterval(function () {
